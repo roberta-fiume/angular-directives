@@ -11,15 +11,22 @@
           <li
             class="list-group-item"
             *ngFor="let odd of oddNumbers"
+            [ngClass]="{oddRed: odd % 2 !== 0}"
+            [ngStyle]="{backgroundColor: odd % 2 !== 0 ? 'yellow' : 'transparent'}"
           >
           {{ odd }}
           </li>
         </div>
 
+        <!-- ngClass assingnes the class oddRed by binding binds the class to the "property" odd of the for loop -->
+        <!-- ngStyle sets the background color based on that condition -->
+
         <div *ngIf="!onlyOdd">
           <li
             class="list-group-item"
             *ngFor="let even of evenNumbers"
+            [ngClass]="{oddRed: even % 2 !== 0}"
+            [ngStyle]="{backgroundColor: even % 2 !== 0 ? 'yellow' : 'transparent'}"
           >
             {{ even }}
           </li>
