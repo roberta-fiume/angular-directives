@@ -9,6 +9,7 @@ export class BetterHighlightDirective implements OnInit {
   //which doesn't know dashes.
   @Input() defaultColor: string = 'transparent';
   @Input() highlightColor: string = 'blue';
+  // @Input('appBetterHighlight') highlightColor: string = 'blue'; //option to bind to directive selector
   @HostBinding('style.backgroundColor') backgroundColor: string;
 
   constructor(private elRef: ElementRef, private renderer: Renderer2) { }
