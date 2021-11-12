@@ -48,7 +48,8 @@
       <!-- <p [appBetterHighlight]="'red'" [defaultColor]="'yellow'">Style me with a better directive!</p>  option by bindin to selector directive -->
 
       <!-- also, if I add a class to this p like "class="blue", the directives overwrite the css of the component -->
-      <div [ngSwitch]="value">
+      <div [ngSwitch]="value"> 
+        <!-- ngSwitch binds value to a property and then the cases are used to match this value -->
         <p *ngSwitchCase="5">Value is 5</p>
         <p *ngSwitchCase="10">Value is 10</p>
         <p *ngSwitchCase="100">Value is 100</p>
